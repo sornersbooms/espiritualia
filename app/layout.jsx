@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-
+import { Analytics } from "@vercel/analytics/next"
 export const metadata = {
   title: 'Espiritualia',
   description: 'Un viaje visual a través de conceptos espirituales.',
@@ -13,7 +13,11 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        <Analytics />
+        {children}
+      </body>
     </html>
   )
 }
+  
