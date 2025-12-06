@@ -1,0 +1,326 @@
+.journeyContainer {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  /* Sí scroll vertical */
+  overflow-x: hidden;
+  /* No scroll horizontal */
+  background: #ffffff;
+  /* Un fondo oscuro más profundo */
+  color: #000000;
+  position: relative;
+  /* Necesario para el posicionamiento del fondo */
+}
+
+.parallaxBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  /* Más alto para el efecto parallax vertical */
+  background-image: radial-gradient(circle at 20% 20%, rgba(35, 174, 254, 0.568) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(53, 157, 255, 0.657) 0%, transparent 40%);
+  z-index: 1;
+  will-change: transform;
+  /* Optimización para la animación */
+}
+
+.journey {
+  position: relative;
+  /* Asegura que el contenido esté sobre el fondo */
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  /* Eje principal vertical */
+  align-items: center;
+  /* Centra los elementos horizontalmente */
+  padding: 50vh 0;
+  /* Espacio vertical para entrada/salida */
+  width: 100%;
+  gap: 50vh;
+  /* Espacio grande entre cada paso */
+}
+
+.step {
+  flex-shrink: 0;
+  /* Evita que los elementos se encojan */
+  width: 80vw;
+  /* Un ancho más definido para los pasos */
+  max-width: 800px;
+}
+
+.stepContent {
+  text-align: center;
+}
+
+.stepContent h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.stepContent h4 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #95a5a6;
+}
+
+.stepContent p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.imageContainer {
+  position: relative;
+  /* MUY IMPORTANTE para <Image fill /> */
+  width: 100%;
+  height: 70vh;
+}
+
+.image {
+  object-fit: contain;
+  /* Asegura que la imagen entera sea visible, sin recortes */
+  border-radius: 15px;
+  background-color: #ffffff;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(1.60);
+  cursor: pointer;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+  .journey {
+    padding: 25vh 0;
+    /* Menos padding en los extremos */
+    gap: 25vh;
+    /* Menos espacio entre pasos */
+  }
+
+  .step {
+    width: 90vw;
+    /* Cada paso ocupa mucho más ancho de la pantalla */
+  }
+
+  .stepContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .stepContent h4 {
+    font-size: 1.8rem;
+  }
+
+  .stepContent p {
+    font-size: 1rem;
+  }
+
+  .imageContainer {
+    height: 60vh;
+    /* Un poco menos de altura para la imagen en móvil */
+  }
+}
+
+/* Hint to expand image */
+.expandHint {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  /* Allows click to pass through to the container */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.imageContainer:hover .expandHint,
+.imageContainer:active .expandHint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* On mobile, maybe always show it or rely on :active which might be tricky. 
+   Let's make it always visible on touch devices or small screens for better UX */
+@media (max-width: 768px) {
+  .expandHint {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+/* Share Section */
+.shareSection {
+  margin-top: 10vh;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  backdrop-filter: blur(10px);
+}
+
+.shareSection h3 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.shareSection p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+.shareButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.shareButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: white;
+}
+
+.shareButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.shareWhatsapp {
+  background: #25D366;
+}
+
+.shareFacebook {
+  background: #1877F2;
+}
+
+.shareTwitter {
+  background: #000000;
+}
+
+.shareCopy {
+  background: #95a5a6;
+}
+
+/* Modal / Lightbox Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+.modalContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+/* State when image is zoomed/large */
+.modalContentZoomed {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* Allow scrolling */
+  cursor: zoom-out;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.modalContentZoomed::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari */
+}
+
+/* Image inside modal */
+.modalImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Image when zoomed */
+.modalImageFull {
+  /* Remove strict constraints that cause cropping */
+  max-width: none;
+  max-height: none;
+
+  /* Scale logic: Fix height to be larger than screen (Zoom) */
+  /* Width adjusts automatically to preserve aspect ratio */
+  height: 150vh;
+  width: auto;
+
+  /* Center the image if it happens to be smaller in one dimension, 
+       though 150vh ensures vertical overflow usually */
+  margin: auto;
+  display: block;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2001;
+  backdrop-filter: blur(4px);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
