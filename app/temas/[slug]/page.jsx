@@ -13,6 +13,8 @@ export async function generateMetadata({ params }) {
   }
 
   const coverImage = tema.secuencia.find(item => item.tipo === 'imagen')?.src || '/icon-512.png';
+  const siteUrl = 'https://espiritualia.vercel.app';
+  const absoluteImageUrl = coverImage.startsWith('http') ? coverImage : `${siteUrl}${coverImage}`;
 
   return {
     title: `${tema.titulo} | Espiritualia`,
@@ -20,11 +22,12 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${tema.titulo} - Espiritualia`,
       description: tema.descripcion,
+      url: `${siteUrl}/temas/${slug}`,
       images: [
         {
-          url: coverImage,
-          width: 800,
-          height: 600,
+          url: absoluteImageUrl,
+          width: 1200,
+          height: 630,
           alt: tema.titulo,
         },
       ],
@@ -34,7 +37,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: tema.titulo,
       description: tema.descripcion,
-      images: [coverImage],
+      images: [absoluteImageUrl],
     },
   };
 }
