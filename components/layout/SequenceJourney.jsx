@@ -79,6 +79,16 @@ export default function SequenceJourney({ secuencia, currentSlug }) {
   const handleImageClick = (step) => {
     setSelectedImage(step);
     setIsZoomed(false); // Reset zoom
+
+    // Track Image Expand into GTM
+    if (typeof window !== 'undefined') {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'view_image_detail',
+        image_alt: step.alt,
+        section_slug: currentSlug
+      });
+    }
   };
 
   const closeFilter = (e) => {
@@ -122,6 +132,18 @@ export default function SequenceJourney({ secuencia, currentSlug }) {
                 onClick={() => {
                   const url = window.location.href;
                   const text = `Estoy aprendiendo conceptos espirituales a través de imágenes en Espiritualia, hoy estoy aprendiendo esto: ${url}`;
+
+                  // Track Share in GTM
+                  if (typeof window !== 'undefined') {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                      event: 'share_content',
+                      method: 'whatsapp',
+                      content_type: 'topic',
+                      item_id: currentSlug
+                    });
+                  }
+
                   window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
                 }}
               >
@@ -132,6 +154,18 @@ export default function SequenceJourney({ secuencia, currentSlug }) {
                 className={`${styles.shareButton} ${styles.shareFacebook}`}
                 onClick={() => {
                   const url = window.location.href;
+
+                  // Track Share in GTM
+                  if (typeof window !== 'undefined') {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                      event: 'share_content',
+                      method: 'facebook',
+                      content_type: 'topic',
+                      item_id: currentSlug
+                    });
+                  }
+
                   window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
                 }}
               >
@@ -143,6 +177,18 @@ export default function SequenceJourney({ secuencia, currentSlug }) {
                 onClick={() => {
                   const url = window.location.href;
                   const text = `Estoy aprendiendo conceptos espirituales a través de imágenes en Espiritualia, hoy estoy aprendiendo esto: ${url}`;
+
+                  // Track Share in GTM
+                  if (typeof window !== 'undefined') {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                      event: 'share_content',
+                      method: 'copy_link',
+                      content_type: 'topic',
+                      item_id: currentSlug
+                    });
+                  }
+
                   navigator.clipboard.writeText(text);
                   alert('Mensaje y enlace copiados al portapapeles');
                 }}
