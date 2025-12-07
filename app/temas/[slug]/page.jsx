@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
   }
 
   const coverImage = tema.secuencia.find(item => item.tipo === 'imagen')?.src || '/icon-512.png';
-  const siteUrl = 'https://espiritualia.vercel.app';
+  const siteUrl = 'https://espiritualia-three.vercel.app';
   const absoluteImageUrl = coverImage.startsWith('http') ? coverImage : `${siteUrl}${coverImage}`;
 
   return {
