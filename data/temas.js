@@ -421,12 +421,184 @@ export const temas = [
         alt: 'Concepto abstracto de enfoque',
       },
     ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {
+    slug: 'disciplina',
+    titulo: 'Disciplina',
+    descripcion: 'Disciplina es hacer lo correcto, incluso cuando no tienes ganas',
+    secuencia: [
+       {
+        tipo: 'titulo',
+        texto: '¿QUÉ ES LA DISCIPLINA SEGÚN LA BIBLIA?',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'La disciplina bíblica no es castigo, es entrenamiento con amor para llegar a ser quien Dios quiere que seas.',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'El que ama la disciplina ama el conocimiento; el que aborrece la reprensión es ignorante. - Proverbios 12:1 --- Imagínate que quieres aprender a jugar fútbol. Si odias entrenar, nunca mejorarás. La disciplina es como entrenar todos los días: cansa, pero te hace mejor. En la vida espiritual pasa lo mismo.',
+      },
+      
+      {
+        tipo: 'imagen',
+        src: '/images/disciplina/disciplina1.png',
+        alt: 'Concepto abstracto de miedo al hombre',
+      },
+       {
+        tipo: 'titulo',
+        texto: 'DIOS DISCIPLINA POR AMOR, NO POR CASTIGO',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'Dios corrige porque le importas. ----------> Hebreos 12:6 “Porque el Señor al que ama, disciplina.”',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'Un buen padre no deja que su hijo haga cualquier cosa que lo dañe. Si Dios te corrige, no es porque esté enojado, sino porque quiere proteger tu futuro.',
+      },
+      {
+        tipo: 'imagen',
+        src: '/images/disciplina/disciplina2.png',
+        alt: 'Concepto abstracto de miedo al hombre',
+      },
+       {
+        tipo: 'titulo',
+        texto: 'LA DISCIPLINA DUELE, PERO DA FRUTO',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'La disciplina es incómoda ahora, pero trae resultados después. ----------> Hebreos 12:11 “Ninguna disciplina parece ser causa de gozo en el momento, sino de tristeza; pero después da fruto pacífico de justicia a los que en ella han sido ejercitados.”',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'Como hacer ejercicio: al principio duele y cansa, pero después te sientes fuerte. La disciplina espiritual funciona igual: hoy cuesta, mañana te transforma.',
+      },
+      {
+        tipo: 'imagen',
+        src: '/images/disciplina/disciplina3.png',
+        alt: 'Concepto abstracto de miedo al hombre',
+      },
+       {
+        tipo: 'titulo',
+        texto: 'LA DISCIPLINA EMPIEZA CON PEQUEÑAS DECISIONES',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'La constancia vale más que la motivación ------> Lucas 16:10 “El que es fiel en lo muy poco, también en lo más es fiel.”',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'No necesitas hacer cosas gigantes. Leer un versículo al día, orar cinco minutos, decir “no” a una tentación pequeña. Las cosas grandes nacen de hábitos pequeños.',
+      },
+      {
+        tipo: 'imagen',
+        src: '/images/disciplina/disciplina4.png',
+        alt: 'Concepto abstracto de miedo al hombre',
+      },
+      {
+        tipo: 'titulo',
+        texto: 'SIN DISCIPLINA, LA VIDA SE DESORDENA',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'La falta de disciplina abre la puerta al caos ------> Proverbios 25:28 “Como ciudad derribada y sin muro es el hombre cuyo espíritu no tiene rienda.”',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'Es como una ciudad sin murallas: cualquiera entra y hace daño. Sin disciplina, cualquier emoción, tentación o distracción controla tu vida.',
+      },
+      {
+        tipo: 'imagen',
+        src: '/images/disciplina/disciplina5.png',
+        alt: 'Concepto abstracto de miedo al hombre',
+      },
+      {
+        tipo: 'titulo',
+        texto: 'SOLUCIÓN BÍBLICA A LA FALTA DE DISCIPLINA',
+      },
+      {
+        tipo: 'titulo',
+        texto: 'ACEPTA QUE NO PUEDES SOLO',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'Juan 15:5 “Separados de mí nada podéis hacer.”',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'No es fuerza de voluntad, es dependencia. La disciplina cristiana empieza pidiendo ayuda a Dios.',
+      },
+      {
+        tipo: 'imagen',
+        src: '/images/disciplina/disciplina6.png',
+        alt: 'Concepto abstracto de disciplina',
+      },
+
+      {
+        tipo: 'titulo',
+        texto: 'CREA RUTINAS SIMPLES (NO PERFECTAS)',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'Salmos 119:105 - “Lámpara es a mis pies tu palabra.”',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'Una lámpara no ilumina toda la carretera, solo el siguiente paso. No busques hacerlo todo, solo el paso de hoy.',
+      },
+      {
+        tipo: 'imagen',
+        src: '/images/disciplina/disciplina7.png',
+        alt: 'Concepto abstracto de disciplina',
+      },
+
+
+
+
+
+
+
+
+      {
+        tipo: 'titulo',
+        texto: 'PERMANECE, AUN CUANDO NO TENGAS GANAS',
+      },
+      {
+        tipo: 'parrafo',
+        texto: '1 Corintios 9:2 - “Golpeo mi cuerpo y lo pongo en servidumbre.”',
+      },
+      {
+        tipo: 'parrafo',
+        texto: 'No todo lo bueno se siente bien al inicio. La disciplina es hacer lo correcto incluso cuando no hay ganas.',
+      },
+      {
+        tipo: 'imagen',
+        src: '/images/disciplina/disciplina8.png',
+        alt: 'Concepto abstracto de disciplina',
+      },
+    ]
   }
-
-
-
-
-
 
 
 

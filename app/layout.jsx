@@ -6,6 +6,10 @@ export const metadata = {
   title: 'Espiritualia',
   description: 'Un viaje visual a través de conceptos espirituales.',
   manifest: '/manifest.json',
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
 }
 
 export const viewport = {
